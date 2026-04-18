@@ -5,6 +5,7 @@ import { db } from './firebase'
 import { getSpotStatus, freeUntil, addMinutesToTime, formatDateKey, getSlotStatus, COURSE_INDEX, DAY_MAP, toMinutes } from './availability'
 import { getEvents } from './sgaApi'
 import Header from './components/Header'
+import StatsBar from './components/StatsBar'
 import SpotGrid from './components/SpotGrid'
 import QueryBar from './components/QueryBar'
 import GeminiPanel from './components/GeminiPanel'
@@ -355,6 +356,7 @@ Return JSON array: [{"day":"Monday","gap_start":"H:MM AM/PM","gap_end":"H:MM AM/
   return (
     <div className="app">
       <Header now={now} />
+      <StatsBar spots={SPOTS} bookings={bookings} now={now} />
 
       <div className={`layout${mapCollapsed ? ' map-collapsed' : ''}`}>
         <main className="main">

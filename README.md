@@ -6,6 +6,7 @@ SeatSniper helps UMBC commuter students find available study spots in real time 
 
 ## Features
 
+- **Live Stats Bar** -- real-time counter showing available/in-class/claimed spots
 - **Live Spot Grid** -- 28 real UMBC rooms with schedule-aware availability
 - **Crowdsourced Reports** -- one-tap seat availability updates instantly sync to all users
 - **Gemini Spot Finder** -- natural language: "quiet spot near Engineering for 2 hours"
@@ -13,6 +14,7 @@ SeatSniper helps UMBC commuter students find available study spots in real time 
 - **Live Clock** -- statuses recompute every minute, spots flip when classes end
 - **Vibe Check** -- AI predicts crowd/noise levels for both instant claims and advance bookings
 - **Advance Booking** -- book a spot up to 7 days ahead, holds your spot until you arrive
+- **Interactive Map** -- visual representation of campus buildings
 
 ## Stack
 

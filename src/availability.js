@@ -154,13 +154,14 @@ export function getSpotStatus(spot, booking, now = new Date()) {
   if (isOccupied(spot, now).occupied) return 'in_class'
   if (booking && booking.booked_until > now.getTime()) return 'taken'
 
-  // Crowdsource freshness: report within last 30 min → 'available', else 'unknown'
+  // Crowdsource freshness: report within last 30 min → 'available'
   if (booking && booking.last_reported) {
     const ageMin = (now.getTime() - booking.last_reported) / 60000
-    return ageMin <= 30 ? 'available' : 'unknown'
+    return ageMin <= 30 ? 'available' : 'likely_free'
   }
 
-  return 'unknown'
+  // No class, no booking → available
+  return 'available'
 }
 
 export function formatBookedUntil(bookedUntil) {

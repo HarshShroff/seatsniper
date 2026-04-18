@@ -1,7 +1,7 @@
 import SpotCard from './SpotCard'
 import { getSpotStatus } from '../availability'
 
-const STATUS_ORDER = { available: 0, unknown: 1, taken: 2, in_class: 3, closed: 4 }
+const STATUS_ORDER = { taken: 0, available: 1, likely_free: 2, unknown: 3, in_class: 4, closed: 5 }
 const ALL = 'All'
 
 const BUILDING_SHORT = {
@@ -39,7 +39,7 @@ export default function SpotGrid({
     })
 
   const availableCount = spots.filter(s =>
-    ['available', 'unknown'].includes(getSpotStatus(s, bookings[s.id], now))
+    ['available', 'likely_free'].includes(getSpotStatus(s, bookings[s.id], now))
   ).length
 
   return (

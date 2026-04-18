@@ -178,6 +178,44 @@ body {
   margin-top: 1px;
 }
 
+/* ── STATS BAR ── */
+.stats-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 12px 24px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.stat-value {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+}
+.stat-value.stat-free { color: var(--free); }
+.stat-value.stat-busy { color: var(--busy); }
+.stat-value.stat-taken { color: var(--gold); }
+.stat-label {
+  font-size: 12px;
+  color: var(--sub);
+  font-weight: 500;
+}
+.stat-divider {
+  color: var(--border);
+  font-size: 18px;
+}
+.stat-next {
+  font-size: 12px;
+  color: var(--sub);
+  font-weight: 500;
+}
+
 /* ── LAYOUT ── */
 .layout {
   display: grid;
