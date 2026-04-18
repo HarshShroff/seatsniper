@@ -1,0 +1,713 @@
+{
+  "meta": {
+    "semester": "Spring 2026",
+    "university": "UMBC",
+    "total_courses": 39,
+    "last_updated": "2026-04-18T00:00:00Z",
+    "note": "Partial catalog \u2014 demo dataset covering AFST, AGNG, AMST, ANCS, ANTH, ART, BIOL, CHEM departments"
+  },
+  "courses": [
+    {
+      "id": "AFST100-01",
+      "code": "AFST 100",
+      "name": "Introduction to the Black Experience",
+      "section": "01",
+      "days": [
+        "Tu",
+        "Th"
+      ],
+      "start": "13:00",
+      "end": "14:15",
+      "building": "Fine Arts",
+      "room": "006",
+      "credits": 3,
+      "status": "Closed",
+      "seats_available": 0,
+      "seats_total": 30
+    },
+    {
+      "id": "AFST205-01",
+      "code": "AFST 205",
+      "name": "Contemporary Black Popular Culture",
+      "section": "01",
+      "days": [
+        "Mo",
+        "We"
+      ],
+      "start": "14:30",
+      "end": "15:45",
+      "building": "Fine Arts",
+      "room": "006",
+      "credits": 3,
+      "status": "Open",
+      "seats_available": 4,
+      "seats_total": 30
+    },
+    {
+      "id": "AFST369-01",
+      "code": "AFST 369",
+      "name": "Black Families in the United States",
+      "section": "01",
+      "days": [
+        "Tu",
+        "Th"
+      ],
+      "start": "10:00",
+      "end": "11:15",
+      "building": "Sondheim",
+      "room": "206",
+      "credits": 3,
+      "status": "Open",
+      "seats_available": 14,
+      "seats_total": 30
+    },
+    {
+      "id": "AFST371-01",
+      "code": "AFST 371",
+      "name": "The Female Offender",
+      "section": "01",
+      "days": [
+        "Mo",
+        "We"
+      ],
+      "start": "13:00",
+      "end": "14:15",
+      "building": "Sondheim",
+      "room": "203",
+      "credits": 3,
+      "status": "Open",
+      "seats_available": 12,
+      "seats_total": 30
+    },
+    {
+      "id": "AFST385-01",
+      "code": "AFST 385",
+      "name": "Problem-Solving in the Urban Black Community",
+      "section": "01",
+      "days": [
+        "Mo",
+        "We"
+      ],
+      "start": "13:00",
+      "end": "14:15",
+      "building": "Sondheim",
+      "room": "204",
+      "credits": 3,
+      "status": "Open",
+      "seats_available": 4,
+      "seats_total": 30
+    },
+    {
+      "id": "AGNG200-01",
+      "code": "AGNG 200",
+      "name": "Aging People, Policy and Management",
+      "section": "01",
+      "days": [
+        "Tu",
+        "Th"
+      ],
+      "start": "13:00",
+      "end": "14:15",
+      "building": "Performing Arts",
+      "room": "234",
+      "credits": 3,
+      "status": "Closed",
+      "seats_available": 0,
+      "seats_total": 40
+    },
+    {
+      "id": "AGNG310-01",
+      "code": "AGNG 310",
+      "name": "Overview of Management in Aging",
+      "section": "01",
+      "days": [
+        "We"
+      ],
+      "start": "16:30",
+      "end": "19:00",
+      "building": "Fine Arts",
+      "room": "001",
+      "credits": 3,
+      "status": "Open",
+      "seats_available": 8,
+      "seats_total": 30
+    },
+    {
+      "id": "AGNG351-01",
+      "code": "AGNG 351",
+      "name": "Business Decision Making for Aging Services",
+      "section": "01",
+      "days": [
+        "Tu",
+        "Th"
+      ],
+      "start": "10:00",
+      "end": "11:00",
+      "building": "Fine Arts",
+      "room": "006",
+      "credits": 3,
+      "status": "Open",
+      "seats_available": 22,
+      "seats_total": 30
+    },
+    {
+      "id": "AMST100-01",
+      "code": "AMST 100",
+      "name": "Introduction to American Studies",
+      "section": "01",
+      "days": [
+        "Tu",
+        "Th"
+      ],
+      "start": "14:30",
+      "end": "15:45",
+      "building": "Math & Psychology",
+      "room": "106",
+      "credits": 3,
+      "status": "Closed",
+      "seats_available": 0,
+      "seats_total": 60
+    },
+    {
+      "id": "AMST490-01",
+      "code": "AMST 490",
+      "name": "Senior Seminar",
+      "section": "01",
+      "days": [
+        "We"
+      ],
+      "start": "16:30",
+      "end": "19:00",
+      "building": "Fine Arts",
+      "room": "559",
+      "credits": 3,
+      "status": "Open",
+      "seats_available": 10,
+      "seats_total": 15
+    },
+    {
+      "id": "ANCS350-01",
+      "code": "ANCS 350",
+      "name": "Topics in Ancient Studies: Emp of Cent Asia & Silk Rd",
+      "section": "01",
+      "days": [
+        "Mo",
+        "We"
+      ],
+      "start": "13:00",
+      "end": "14:15",
+      "building": "Math & Psychology",
+      "room": "008",
+      "credits": 3,
+      "status": "Open",
+      "seats_available": 8,
+      "seats_total": 30
+    },
+    {
+      "id": "ANCS375-01",
+      "code": "ANCS 375",
+      "name": "Ancient Medicine",
+      "section": "01",
+      "days": [
+        "Mo",
+        "We"
+      ],
+      "start": "14:30",
+      "end": "15:45",
+      "building": "Sondheim",
+      "room": "114",
+      "credits": 3,
+      "status": "Open",
+      "seats_available": 1,
+      "seats_total": 40
+    },
+    {
+      "id": "ANTH320-01",
+      "code": "ANTH 320",
+      "name": "Witchcraft and Magic",
+      "section": "01",
+      "days": [
+        "We"
+      ],
+      "start": "16:30",
+      "end": "19:00",
+      "building": "ILS",
+      "room": "201",
+      "credits": 3,
+      "status": "Open",
+      "seats_available": 2,
+      "seats_total": 30
+    },
+    {
+      "id": "ANTH322-01",
+      "code": "ANTH 322",
+      "name": "Forensic Anthropology",
+      "section": "01",
+      "days": [
+        "Mo",
+        "We"
+      ],
+      "start": "10:00",
+      "end": "11:15",
+      "building": "ILS",
+      "room": "201",
+      "credits": 3,
+      "status": "Open",
+      "seats_available": 6,
+      "seats_total": 30
+    },
+    {
+      "id": "ANTH397-01",
+      "code": "ANTH 397",
+      "name": "Anthropology of Performance",
+      "section": "01",
+      "days": [
+        "Tu",
+        "Th"
+      ],
+      "start": "13:00",
+      "end": "14:15",
+      "building": "Sondheim",
+      "room": "409",
+      "credits": 3,
+      "status": "Open",
+      "seats_available": 13,
+      "seats_total": 30
+    },
+    {
+      "id": "ANTH480-01",
+      "code": "ANTH 480",
+      "name": "Anthropological Research: Capstone",
+      "section": "01",
+      "days": [
+        "Mo",
+        "We"
+      ],
+      "start": "14:30",
+      "end": "15:45",
+      "building": "ILS",
+      "room": "301",
+      "credits": 4,
+      "status": "Open",
+      "seats_available": 10,
+      "seats_total": 20
+    },
+    {
+      "id": "ART210-01",
+      "code": "ART 210",
+      "name": "Visual Concepts I",
+      "section": "01",
+      "days": [
+        "Mo",
+        "We"
+      ],
+      "start": "10:00",
+      "end": "11:50",
+      "building": "Fine Arts",
+      "room": "114",
+      "credits": 3,
+      "status": "Open",
+      "seats_available": 1,
+      "seats_total": 14
+    },
+    {
+      "id": "ART315-01",
+      "code": "ART 315",
+      "name": "Intermediate Narrative Production",
+      "section": "01",
+      "days": [
+        "We"
+      ],
+      "start": "16:00",
+      "end": "19:40",
+      "building": "Fine Arts",
+      "room": "207C",
+      "credits": 3,
+      "status": "Open",
+      "seats_available": 3,
+      "seats_total": 14
+    },
+    {
+      "id": "ART325-01",
+      "code": "ART 325",
+      "name": "History of Film and Video: 1965 to Present",
+      "section": "01",
+      "days": [
+        "We"
+      ],
+      "start": "16:30",
+      "end": "19:00",
+      "building": "Performing Arts",
+      "room": "132",
+      "credits": 3,
+      "status": "Open",
+      "seats_available": 42,
+      "seats_total": 90
+    },
+    {
+      "id": "ART383-02",
+      "code": "ART 383",
+      "name": "Sound Design",
+      "section": "02",
+      "days": [
+        "Th"
+      ],
+      "start": "15:00",
+      "end": "18:40",
+      "building": "Fine Arts",
+      "room": "221A",
+      "credits": 3,
+      "status": "Open",
+      "seats_available": 1,
+      "seats_total": 14
+    },
+    {
+      "id": "ART426-01",
+      "code": "ART 426",
+      "name": "Professional Practices in Graphic Design",
+      "section": "01",
+      "days": [
+        "Tu",
+        "Th"
+      ],
+      "start": "09:00",
+      "end": "10:50",
+      "building": "Fine Arts",
+      "room": "112",
+      "credits": 3,
+      "status": "Open",
+      "seats_available": 1,
+      "seats_total": 16
+    },
+    {
+      "id": "BIOL140-01",
+      "code": "BIOL 140",
+      "name": "Foundations of Biology: Ecology and Evolution",
+      "section": "01",
+      "days": [
+        "Tu",
+        "Th"
+      ],
+      "start": "08:30",
+      "end": "09:45",
+      "building": "Meyerhoff Chemistry",
+      "room": "030",
+      "credits": 4,
+      "status": "Open",
+      "seats_available": 25,
+      "seats_total": 338
+    },
+    {
+      "id": "BIOL141-01",
+      "code": "BIOL 141",
+      "name": "Foundations of Biology: Cells, Energy and Organisms",
+      "section": "01",
+      "days": [
+        "Tu",
+        "Th"
+      ],
+      "start": "10:00",
+      "end": "11:15",
+      "building": "Meyerhoff Chemistry",
+      "room": "030",
+      "credits": 4,
+      "status": "Open",
+      "seats_available": 61,
+      "seats_total": 338
+    },
+    {
+      "id": "BIOL252-01",
+      "code": "BIOL 252",
+      "name": "Human Anatomy and Physiology II",
+      "section": "01",
+      "days": [
+        "Tu",
+        "Th"
+      ],
+      "start": "13:00",
+      "end": "14:15",
+      "building": "Lecture Hall 1",
+      "room": "101",
+      "credits": 3,
+      "status": "Open",
+      "seats_available": 55,
+      "seats_total": 110
+    },
+    {
+      "id": "BIOL302-01",
+      "code": "BIOL 302",
+      "name": "Molecular and General Genetics",
+      "section": "01",
+      "days": [
+        "Tu",
+        "Th"
+      ],
+      "start": "13:00",
+      "end": "14:15",
+      "building": "Meyerhoff Chemistry",
+      "room": "030",
+      "credits": 4,
+      "status": "Open",
+      "seats_available": 38,
+      "seats_total": 300
+    },
+    {
+      "id": "BIOL303-01",
+      "code": "BIOL 303",
+      "name": "Cell Biology",
+      "section": "01",
+      "days": [
+        "Tu",
+        "Th"
+      ],
+      "start": "11:30",
+      "end": "12:45",
+      "building": "ITE",
+      "room": "104",
+      "credits": 4,
+      "status": "Open",
+      "seats_available": 63,
+      "seats_total": 252
+    },
+    {
+      "id": "BIOL305-01",
+      "code": "BIOL 305",
+      "name": "Comparative Animal Physiology",
+      "section": "01",
+      "days": [
+        "Tu",
+        "Th"
+      ],
+      "start": "10:00",
+      "end": "11:15",
+      "building": "ILS",
+      "room": "116B",
+      "credits": 3,
+      "status": "Open",
+      "seats_available": 41,
+      "seats_total": 90
+    },
+    {
+      "id": "BIOL375-01",
+      "code": "BIOL 375",
+      "name": "General Microbiology",
+      "section": "01",
+      "days": [
+        "Tu",
+        "Th"
+      ],
+      "start": "11:30",
+      "end": "12:45",
+      "building": "Meyerhoff Chemistry",
+      "room": "030",
+      "credits": 3,
+      "status": "Open",
+      "seats_available": 99,
+      "seats_total": 200
+    },
+    {
+      "id": "BIOL430-01",
+      "code": "BIOL 430",
+      "name": "Biological Chemistry",
+      "section": "01",
+      "days": [
+        "Mo",
+        "We"
+      ],
+      "start": "10:00",
+      "end": "11:50",
+      "building": "ILS",
+      "room": "118",
+      "credits": 4,
+      "status": "Open",
+      "seats_available": 45,
+      "seats_total": 90
+    },
+    {
+      "id": "BIOL495-01",
+      "code": "BIOL 495",
+      "name": "Seminar in Bioinformatics",
+      "section": "01",
+      "days": [
+        "Mo",
+        "We"
+      ],
+      "start": "14:00",
+      "end": "15:50",
+      "building": "Sherman Hall",
+      "room": "103",
+      "credits": 4,
+      "status": "Open",
+      "seats_available": 16,
+      "seats_total": 35
+    },
+    {
+      "id": "CHEM101-01",
+      "code": "CHEM 101",
+      "name": "Principles of Chemistry I",
+      "section": "01",
+      "days": [
+        "Mo",
+        "We",
+        "Fr"
+      ],
+      "start": "varies",
+      "end": "varies",
+      "building": "varies",
+      "room": "",
+      "credits": 4,
+      "status": "Open",
+      "seats_available": 11,
+      "seats_total": 338
+    },
+    {
+      "id": "CHEM102-01",
+      "code": "CHEM 102",
+      "name": "Principles of Chemistry II",
+      "section": "01",
+      "days": [
+        "Mo",
+        "We",
+        "Fr"
+      ],
+      "start": "varies",
+      "end": "varies",
+      "building": "varies",
+      "room": "",
+      "credits": 4,
+      "status": "Open",
+      "seats_available": 20,
+      "seats_total": 310
+    },
+    {
+      "id": "CHEM120-01",
+      "code": "CHEM 120",
+      "name": "Introduction to General, Organic, and Biochemistry",
+      "section": "01",
+      "days": [
+        "Tu",
+        "Th"
+      ],
+      "start": "10:00",
+      "end": "11:15",
+      "building": "Engineering",
+      "room": "027",
+      "credits": 4,
+      "status": "Open",
+      "seats_available": 49,
+      "seats_total": 187
+    },
+    {
+      "id": "CHEM300-01",
+      "code": "CHEM 300",
+      "name": "Analytical Chemistry",
+      "section": "01",
+      "days": [
+        "Tu",
+        "Th"
+      ],
+      "start": "10:00",
+      "end": "11:15",
+      "building": "Fine Arts",
+      "room": "306",
+      "credits": 4,
+      "status": "Open",
+      "seats_available": 37,
+      "seats_total": 90
+    },
+    {
+      "id": "CHEM302-01",
+      "code": "CHEM 302",
+      "name": "Physical Chemistry II",
+      "section": "01",
+      "days": [
+        "Mo",
+        "We",
+        "Fr"
+      ],
+      "start": "09:00",
+      "end": "09:50",
+      "building": "Biological Sciences",
+      "room": "120",
+      "credits": 3,
+      "status": "Open",
+      "seats_available": 36,
+      "seats_total": 60
+    },
+    {
+      "id": "CHEM351-01",
+      "code": "CHEM 351",
+      "name": "Organic Chemistry I",
+      "section": "01",
+      "days": [
+        "Mo",
+        "We",
+        "Fr"
+      ],
+      "start": "varies",
+      "end": "varies",
+      "building": "varies",
+      "room": "",
+      "credits": 3,
+      "status": "Open",
+      "seats_available": 2,
+      "seats_total": 187
+    },
+    {
+      "id": "CHEM352-01",
+      "code": "CHEM 352",
+      "name": "Organic Chemistry II",
+      "section": "01",
+      "days": [
+        "Mo",
+        "We",
+        "Fr"
+      ],
+      "start": "varies",
+      "end": "varies",
+      "building": "varies",
+      "room": "",
+      "credits": 3,
+      "status": "Open",
+      "seats_available": 33,
+      "seats_total": 170
+    },
+    {
+      "id": "CHEM405-01",
+      "code": "CHEM 405",
+      "name": "Inorganic Chemistry",
+      "section": "01",
+      "days": [
+        "Mo",
+        "We",
+        "Fr"
+      ],
+      "start": "10:00",
+      "end": "10:50",
+      "building": "Meyerhoff Chemistry",
+      "room": "272",
+      "credits": 3,
+      "status": "Open",
+      "seats_available": 6,
+      "seats_total": 23
+    },
+    {
+      "id": "CHEM406-01",
+      "code": "CHEM 406",
+      "name": "Bioinorganic Chemistry",
+      "section": "01",
+      "days": [
+        "Tu",
+        "Th"
+      ],
+      "start": "10:00",
+      "end": "11:15",
+      "building": "Meyerhoff Chemistry",
+      "room": "272",
+      "credits": 3,
+      "status": "Open",
+      "seats_available": 15,
+      "seats_total": 24
+    }
+  ]
+}

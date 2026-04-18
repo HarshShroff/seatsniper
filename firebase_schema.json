@@ -1,0 +1,51 @@
+{
+  "description": "Firebase Realtime DB schema for SeatSniper",
+  "collections": {
+    "spots": {
+      "description": "Static spot data (loaded once from study_spots.json)",
+      "example_doc": {
+        "id": "fine_arts_006",
+        "display_name": "Fine Arts 006",
+        "building": "Fine Arts",
+        "room": "006",
+        "room_type": "large_classroom",
+        "capacity": 90,
+        "coordinates": {"lat": 39.2551, "lng": -76.7137},
+        "hours": {"open": "07:00", "close": "23:59", "last_booking": "23:30"},
+        "schedule": [
+          {"course_id": "AFST100-01", "days": ["Tu","Th"], "start": "13:00", "end": "14:15"}
+        ]
+      }
+    },
+    "reports": {
+      "description": "Live crowdsourced reports — written on every user tap",
+      "example_doc": {
+        "spot_id": "fine_arts_006",
+        "status": "available",
+        "timestamp": 1713480000000,
+        "session_id": "anon_xyz123"
+      }
+    },
+    "spot_status": {
+      "description": "Aggregated live status — computed from last 5 reports, updated on every new report",
+      "example_doc": {
+        "spot_id": "fine_arts_006",
+        "current_status": "available",
+        "last_reported": 1713480000000,
+        "report_count": 3,
+        "confidence": "medium"
+      }
+    }
+  },
+  "availability_logic": {
+    "note": "Computed client-side or by Gemini — NOT stored in Firebase",
+    "steps": [
+      "1. Get current day + time",
+      "2. Check spot.schedule for any block where day matches AND start <= now <= end",
+      "3. If a class is running → status = 'in_class' (override any crowdsource report)",
+      "4. If no class running → use spot_status.current_status from Firebase",
+      "5. If last_reported > 30 min ago → status = 'unknown'",
+      "6. After 23:30 → status = 'closed'"
+    ]
+  }
+}

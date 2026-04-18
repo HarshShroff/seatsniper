@@ -1,0 +1,908 @@
+{
+  "meta": {
+    "source": "Derived from UMBC Spring 2026 course catalog",
+    "total_spots": 61,
+    "note": "Rooms available when no course is scheduled. Capacity = max enrollment of courses using the room.",
+    "closing_time": "23:59",
+    "last_booking": "23:30",
+    "lab_rooms_excluded": true
+  },
+  "study_spots": [
+    {
+      "id": "biological_sciences_120",
+      "building": "Biological Sciences",
+      "room": "120",
+      "display_name": "Biological Sciences 120",
+      "room_type": "large_classroom",
+      "capacity": 60,
+      "coordinates": {
+        "lat": 39.2542,
+        "lng": -76.7148
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "engineering_027",
+      "building": "Engineering",
+      "room": "027",
+      "display_name": "Engineering 027",
+      "room_type": "lecture_hall",
+      "capacity": 187,
+      "coordinates": {
+        "lat": 39.2575,
+        "lng": -76.7122
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "fine_arts_001",
+      "building": "Fine Arts",
+      "room": "001",
+      "display_name": "Fine Arts 001",
+      "room_type": "classroom",
+      "capacity": 30,
+      "coordinates": {
+        "lat": 39.2551,
+        "lng": -76.7137
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "fine_arts_006",
+      "building": "Fine Arts",
+      "room": "006",
+      "display_name": "Fine Arts 006",
+      "room_type": "classroom",
+      "capacity": 30,
+      "coordinates": {
+        "lat": 39.2551,
+        "lng": -76.7137
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "fine_arts_112",
+      "building": "Fine Arts",
+      "room": "112",
+      "display_name": "Fine Arts 112",
+      "room_type": "seminar_room",
+      "capacity": 16,
+      "coordinates": {
+        "lat": 39.2551,
+        "lng": -76.7137
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "fine_arts_114",
+      "building": "Fine Arts",
+      "room": "114",
+      "display_name": "Fine Arts 114",
+      "room_type": "seminar_room",
+      "capacity": 14,
+      "coordinates": {
+        "lat": 39.2551,
+        "lng": -76.7137
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "fine_arts_207c",
+      "building": "Fine Arts",
+      "room": "207C",
+      "display_name": "Fine Arts 207C",
+      "room_type": "seminar_room",
+      "capacity": 14,
+      "coordinates": {
+        "lat": 39.2551,
+        "lng": -76.7137
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "fine_arts_221a",
+      "building": "Fine Arts",
+      "room": "221A",
+      "display_name": "Fine Arts 221A",
+      "room_type": "seminar_room",
+      "capacity": 14,
+      "coordinates": {
+        "lat": 39.2551,
+        "lng": -76.7137
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "fine_arts_306",
+      "building": "Fine Arts",
+      "room": "306",
+      "display_name": "Fine Arts 306",
+      "room_type": "large_classroom",
+      "capacity": 90,
+      "coordinates": {
+        "lat": 39.2551,
+        "lng": -76.7137
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "fine_arts_559",
+      "building": "Fine Arts",
+      "room": "559",
+      "display_name": "Fine Arts 559",
+      "room_type": "seminar_room",
+      "capacity": 15,
+      "coordinates": {
+        "lat": 39.2551,
+        "lng": -76.7137
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "ils_116b",
+      "building": "ILS",
+      "room": "116B",
+      "display_name": "ILS 116B",
+      "room_type": "large_classroom",
+      "capacity": 90,
+      "coordinates": {
+        "lat": 39.2545,
+        "lng": -76.7118
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "ils_118",
+      "building": "ILS",
+      "room": "118",
+      "display_name": "ILS 118",
+      "room_type": "large_classroom",
+      "capacity": 90,
+      "coordinates": {
+        "lat": 39.2545,
+        "lng": -76.7118
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "ils_201",
+      "building": "ILS",
+      "room": "201",
+      "display_name": "ILS 201",
+      "room_type": "classroom",
+      "capacity": 30,
+      "coordinates": {
+        "lat": 39.2545,
+        "lng": -76.7118
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "ils_301",
+      "building": "ILS",
+      "room": "301",
+      "display_name": "ILS 301",
+      "room_type": "classroom",
+      "capacity": 20,
+      "coordinates": {
+        "lat": 39.2545,
+        "lng": -76.7118
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "ite_104",
+      "building": "ITE",
+      "room": "104",
+      "display_name": "ITE 104",
+      "room_type": "lecture_hall",
+      "capacity": 252,
+      "coordinates": {
+        "lat": 39.257,
+        "lng": -76.711
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "lecture_hall_1_101",
+      "building": "Lecture Hall 1",
+      "room": "101",
+      "display_name": "Lecture Hall 1 101",
+      "room_type": "lecture_hall",
+      "capacity": 110,
+      "coordinates": {
+        "lat": 39.256,
+        "lng": -76.7132
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "math_&_psychology_008",
+      "building": "Math & Psychology",
+      "room": "008",
+      "display_name": "Math & Psychology 008",
+      "room_type": "classroom",
+      "capacity": 30,
+      "coordinates": {
+        "lat": 39.2562,
+        "lng": -76.7145
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "math_&_psychology_106",
+      "building": "Math & Psychology",
+      "room": "106",
+      "display_name": "Math & Psychology 106",
+      "room_type": "large_classroom",
+      "capacity": 60,
+      "coordinates": {
+        "lat": 39.2562,
+        "lng": -76.7145
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "meyerhoff_chemistry_030",
+      "building": "Meyerhoff Chemistry",
+      "room": "030",
+      "display_name": "Meyerhoff Chemistry 030",
+      "room_type": "lecture_hall",
+      "capacity": 338,
+      "coordinates": {
+        "lat": 39.2558,
+        "lng": -76.7155
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "meyerhoff_chemistry_272",
+      "building": "Meyerhoff Chemistry",
+      "room": "272",
+      "display_name": "Meyerhoff Chemistry 272",
+      "room_type": "classroom",
+      "capacity": 24,
+      "coordinates": {
+        "lat": 39.2558,
+        "lng": -76.7155
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "performing_arts_132",
+      "building": "Performing Arts",
+      "room": "132",
+      "display_name": "Performing Arts 132",
+      "room_type": "large_classroom",
+      "capacity": 90,
+      "coordinates": {
+        "lat": 39.2548,
+        "lng": -76.713
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "performing_arts_234",
+      "building": "Performing Arts",
+      "room": "234",
+      "display_name": "Performing Arts 234",
+      "room_type": "large_classroom",
+      "capacity": 40,
+      "coordinates": {
+        "lat": 39.2548,
+        "lng": -76.713
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "sherman_hall_103",
+      "building": "Sherman Hall",
+      "room": "103",
+      "display_name": "Sherman Hall 103",
+      "room_type": "classroom",
+      "capacity": 35,
+      "coordinates": {
+        "lat": 39.2553,
+        "lng": -76.714
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "sondheim_114",
+      "building": "Sondheim",
+      "room": "114",
+      "display_name": "Sondheim 114",
+      "room_type": "large_classroom",
+      "capacity": 40,
+      "coordinates": {
+        "lat": 39.2557,
+        "lng": -76.7125
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "sondheim_203",
+      "building": "Sondheim",
+      "room": "203",
+      "display_name": "Sondheim 203",
+      "room_type": "classroom",
+      "capacity": 30,
+      "coordinates": {
+        "lat": 39.2557,
+        "lng": -76.7125
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "sondheim_204",
+      "building": "Sondheim",
+      "room": "204",
+      "display_name": "Sondheim 204",
+      "room_type": "classroom",
+      "capacity": 30,
+      "coordinates": {
+        "lat": 39.2557,
+        "lng": -76.7125
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "sondheim_206",
+      "building": "Sondheim",
+      "room": "206",
+      "display_name": "Sondheim 206",
+      "room_type": "classroom",
+      "capacity": 30,
+      "coordinates": {
+        "lat": 39.2557,
+        "lng": -76.7125
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "sondheim_409",
+      "building": "Sondheim",
+      "room": "409",
+      "display_name": "Sondheim 409",
+      "room_type": "classroom",
+      "capacity": 30,
+      "coordinates": {
+        "lat": 39.2557,
+        "lng": -76.7125
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
+      "id": "aok_rlc",
+      "building": "AOK Library",
+      "room": "RLC (1st Floor)",
+      "display_name": "AOK Library — RLC",
+      "room_type": "open_lab",
+      "capacity": 160,
+      "noise_level": "collaborative",
+      "floor": 1,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "00:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "24/7 access. 160 computers. Loud group work OK.",
+      "schedule": []
+    },
+    {
+      "id": "aok_2f_study",
+      "building": "AOK Library",
+      "room": "2nd Floor Study Area",
+      "display_name": "AOK Library — 2nd Floor",
+      "room_type": "open",
+      "capacity": 60,
+      "noise_level": "collaborative",
+      "floor": 2,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Whiteboards + monitors. Good for tech-heavy group work.",
+      "schedule": []
+    },
+    {
+      "id": "aok_204",
+      "building": "AOK Library",
+      "room": "204 (Individual)",
+      "display_name": "AOK Library — Room 204",
+      "room_type": "individual_study",
+      "capacity": 1,
+      "noise_level": "collaborative",
+      "floor": 2,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Individual study room, 2nd floor.",
+      "schedule": []
+    },
+    {
+      "id": "aok_205",
+      "building": "AOK Library",
+      "room": "205 (Individual)",
+      "display_name": "AOK Library — Room 205",
+      "room_type": "individual_study",
+      "capacity": 1,
+      "noise_level": "collaborative",
+      "floor": 2,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Individual study room, 2nd floor.",
+      "schedule": []
+    },
+    {
+      "id": "aok_206",
+      "building": "AOK Library",
+      "room": "206 (Individual)",
+      "display_name": "AOK Library — Room 206",
+      "room_type": "individual_study",
+      "capacity": 1,
+      "noise_level": "collaborative",
+      "floor": 2,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Individual study room, 2nd floor.",
+      "schedule": []
+    },
+    {
+      "id": "aok_207",
+      "building": "AOK Library",
+      "room": "207 (Individual)",
+      "display_name": "AOK Library — Room 207",
+      "room_type": "individual_study",
+      "capacity": 1,
+      "noise_level": "collaborative",
+      "floor": 2,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Individual study room, 2nd floor.",
+      "schedule": []
+    },
+    {
+      "id": "aok_208",
+      "building": "AOK Library",
+      "room": "208 (Individual)",
+      "display_name": "AOK Library — Room 208",
+      "room_type": "individual_study",
+      "capacity": 1,
+      "noise_level": "collaborative",
+      "floor": 2,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Individual study room, 2nd floor.",
+      "schedule": []
+    },
+    {
+      "id": "aok_209",
+      "building": "AOK Library",
+      "room": "209 (Individual)",
+      "display_name": "AOK Library — Room 209",
+      "room_type": "individual_study",
+      "capacity": 1,
+      "noise_level": "collaborative",
+      "floor": 2,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Individual study room, 2nd floor.",
+      "schedule": []
+    },
+    {
+      "id": "aok_231",
+      "building": "AOK Library",
+      "room": "231 (Individual)",
+      "display_name": "AOK Library — Room 231",
+      "room_type": "individual_study",
+      "capacity": 1,
+      "noise_level": "collaborative",
+      "floor": 2,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Individual study room, 2nd floor.",
+      "schedule": []
+    },
+    {
+      "id": "aok_232",
+      "building": "AOK Library",
+      "room": "232 (Individual)",
+      "display_name": "AOK Library — Room 232",
+      "room_type": "individual_study",
+      "capacity": 1,
+      "noise_level": "collaborative",
+      "floor": 2,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Individual study room, 2nd floor.",
+      "schedule": []
+    },
+    {
+      "id": "aok_257",
+      "building": "AOK Library",
+      "room": "257 (Presentation Practice)",
+      "display_name": "AOK Library — Presentation Room 257",
+      "room_type": "specialty",
+      "capacity": 6,
+      "noise_level": "collaborative",
+      "floor": 2,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Presentation practice room. Good for rehearsing talks.",
+      "schedule": []
+    },
+    {
+      "id": "aok_258",
+      "building": "AOK Library",
+      "room": "258 (Screening Room)",
+      "display_name": "AOK Library — Screening Room 258",
+      "room_type": "specialty",
+      "capacity": 10,
+      "noise_level": "collaborative",
+      "floor": 2,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Screening room. Good for watching lectures/films.",
+      "schedule": []
+    },
+    {
+      "id": "aok_210",
+      "building": "AOK Library",
+      "room": "210 (Group Study)",
+      "display_name": "AOK Library — Group Room 210",
+      "room_type": "group_study",
+      "capacity": 8,
+      "noise_level": "collaborative",
+      "floor": 2,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Group study room, 2nd floor.",
+      "schedule": []
+    },
+    {
+      "id": "aok_211",
+      "building": "AOK Library",
+      "room": "211 (Group Study)",
+      "display_name": "AOK Library — Group Room 211",
+      "room_type": "group_study",
+      "capacity": 8,
+      "noise_level": "collaborative",
+      "floor": 2,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Group study room, 2nd floor.",
+      "schedule": []
+    },
+    {
+      "id": "aok_212",
+      "building": "AOK Library",
+      "room": "212 (Group Study)",
+      "display_name": "AOK Library — Group Room 212",
+      "room_type": "group_study",
+      "capacity": 8,
+      "noise_level": "collaborative",
+      "floor": 2,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Group study room, 2nd floor.",
+      "schedule": []
+    },
+    {
+      "id": "aok_213",
+      "building": "AOK Library",
+      "room": "213 (Group Study)",
+      "display_name": "AOK Library — Group Room 213",
+      "room_type": "group_study",
+      "capacity": 8,
+      "noise_level": "collaborative",
+      "floor": 2,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Group study room, 2nd floor.",
+      "schedule": []
+    },
+    {
+      "id": "aok_368",
+      "building": "AOK Library",
+      "room": "368 (Collaboration Room)",
+      "display_name": "AOK Library — Collaboration Room 368",
+      "room_type": "specialty",
+      "capacity": 20,
+      "noise_level": "quiet",
+      "floor": 3,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Specialty collaboration room, 3rd floor. Whisper-only floor.",
+      "schedule": []
+    },
+    {
+      "id": "aok_369",
+      "building": "AOK Library",
+      "room": "369 (Group Study)",
+      "display_name": "AOK Library — Group Room 369",
+      "room_type": "group_study",
+      "capacity": 8,
+      "noise_level": "quiet",
+      "floor": 3,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Quiet group room, 3rd floor. Whisper only.",
+      "schedule": []
+    },
+    {
+      "id": "aok_370",
+      "building": "AOK Library",
+      "room": "370 (Group Study)",
+      "display_name": "AOK Library — Group Room 370",
+      "room_type": "group_study",
+      "capacity": 8,
+      "noise_level": "quiet",
+      "floor": 3,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Quiet group room, 3rd floor. Whisper only.",
+      "schedule": []
+    },
+    {
+      "id": "aok_371",
+      "building": "AOK Library",
+      "room": "371 (Group Study)",
+      "display_name": "AOK Library — Group Room 371",
+      "room_type": "group_study",
+      "capacity": 8,
+      "noise_level": "quiet",
+      "floor": 3,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Quiet group room, 3rd floor. Whisper only.",
+      "schedule": []
+    },
+    {
+      "id": "aok_372",
+      "building": "AOK Library",
+      "room": "372 (Group Study)",
+      "display_name": "AOK Library — Group Room 372",
+      "room_type": "group_study",
+      "capacity": 8,
+      "noise_level": "quiet",
+      "floor": 3,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Quiet group room, 3rd floor. Whisper only.",
+      "schedule": []
+    },
+    {
+      "id": "aok_373",
+      "building": "AOK Library",
+      "room": "373 (Group Study)",
+      "display_name": "AOK Library — Group Room 373",
+      "room_type": "group_study",
+      "capacity": 8,
+      "noise_level": "quiet",
+      "floor": 3,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Quiet group room, 3rd floor. Whisper only.",
+      "schedule": []
+    },
+    {
+      "id": "aok_374",
+      "building": "AOK Library",
+      "room": "374 (Group Study)",
+      "display_name": "AOK Library — Group Room 374",
+      "room_type": "group_study",
+      "capacity": 8,
+      "noise_level": "quiet",
+      "floor": 3,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Quiet group room, 3rd floor. Whisper only.",
+      "schedule": []
+    },
+    {
+      "id": "aok_453",
+      "building": "AOK Library",
+      "room": "453 (Group Study)",
+      "display_name": "AOK Library — Group Room 453",
+      "room_type": "group_study",
+      "capacity": 8,
+      "noise_level": "quiet",
+      "floor": 4,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Quiet group room, 4th floor. Whisper only.",
+      "schedule": []
+    },
+    {
+      "id": "aok_454",
+      "building": "AOK Library",
+      "room": "454 (Group Study)",
+      "display_name": "AOK Library — Group Room 454",
+      "room_type": "group_study",
+      "capacity": 8,
+      "noise_level": "quiet",
+      "floor": 4,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Quiet group room, 4th floor. Whisper only.",
+      "schedule": []
+    },
+    {
+      "id": "aok_456",
+      "building": "AOK Library",
+      "room": "456 (Group Study)",
+      "display_name": "AOK Library — Group Room 456",
+      "room_type": "group_study",
+      "capacity": 8,
+      "noise_level": "quiet",
+      "floor": 4,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Quiet group room, 4th floor. Whisper only.",
+      "schedule": []
+    },
+    {
+      "id": "aok_457",
+      "building": "AOK Library",
+      "room": "457 (Group Study)",
+      "display_name": "AOK Library — Group Room 457",
+      "room_type": "group_study",
+      "capacity": 8,
+      "noise_level": "quiet",
+      "floor": 4,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Quiet group room, 4th floor. Whisper only.",
+      "schedule": []
+    },
+    {
+      "id": "aok_5f",
+      "building": "AOK Library",
+      "room": "5th Floor",
+      "display_name": "AOK Library — 5th Floor",
+      "room_type": "open",
+      "capacity": 40,
+      "noise_level": "silent",
+      "floor": 5,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Absolutely silent. No talking, phones on silent. Best for deep work/cramming.",
+      "schedule": []
+    },
+    {
+      "id": "aok_6f",
+      "building": "AOK Library",
+      "room": "6th Floor",
+      "display_name": "AOK Library — 6th Floor",
+      "room_type": "open",
+      "capacity": 40,
+      "noise_level": "silent",
+      "floor": 6,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Absolutely silent. No talking, phones on silent. Best for deep work/cramming.",
+      "schedule": []
+    },
+    {
+      "id": "aok_7f",
+      "building": "AOK Library",
+      "room": "7th Floor",
+      "display_name": "AOK Library — 7th Floor",
+      "room_type": "open",
+      "capacity": 30,
+      "noise_level": "collaborative",
+      "floor": 7,
+      "coordinates": { "lat": 39.2556, "lng": -76.7133 },
+      "hours": { "open": "07:00", "close": "23:59", "last_booking": "23:30" },
+      "notes": "Collaborative. Often hosts events; noise can bleed from President's Room.",
+      "schedule": []
+    }
+  ]
+}
