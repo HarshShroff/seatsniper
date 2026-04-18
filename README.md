@@ -1,4 +1,4 @@
-# 🎯 SeatSniper
+# 🎯 SeatSniper AI
 
 **Your campus. Your time. Never wasted.**
 
