@@ -1,4 +1,4 @@
-# 🎯 SeatSniper
+# SeatSniper
 
 **Your campus. Your time. Never wasted.**
 
@@ -7,7 +7,7 @@ SeatSniper helps UMBC commuter students find available study spots in real time 
 ## Features
 
 - **Live Stats Bar** -- real-time counter showing available/in-class/claimed spots
-- **Live Spot Grid** -- 28 real UMBC rooms with schedule-aware availability
+- **Live Spot Grid** -- 29 real UMBC rooms with schedule-aware availability
 - **Crowdsourced Reports** -- one-tap seat availability updates instantly sync to all users
 - **Gemini Spot Finder** -- natural language: "quiet spot near Engineering for 2 hours"
 - **Gemini Gap Optimizer** -- paste your schedule, get a full study day plan with spot recommendations
@@ -52,27 +52,37 @@ src/
   firebase.js         # Firebase init
   App.jsx             # Root: Firebase listeners, Gemini calls, state
   components/
-    Header.jsx        # Logo + live clock
-    QueryBar.jsx     # Find a spot / Plan my day tabs
-    GeminiPanel.jsx  # AI response display
-    SpotGrid.jsx    # Filter pills, sort toggle, grid
-    SpotCard.jsx    # Individual spot: status, free-until, claim buttons
+    Header.jsx       # Logo + live clock
+    StatsBar.jsx      # Live stats counter
+    QueryBar.jsx      # Find a spot / Plan my day tabs
+    GeminiPanel.jsx   # AI response display
+    SpotGrid.jsx     # Filter pills, sort toggle, grid
+    SpotCard.jsx      # Individual spot: status, free-until, claim buttons
     BookingModal.jsx # Instant claim + advance booking with vibe check
-  study_spots.json    # 28 real UMBC rooms with schedules
-  seed.js            # One-time Firebase seeder
+    MapPanel.jsx      # Campus map
+    MyBookings.jsx    # Advance bookings list
+  study_spots.json    # 29 real UMBC rooms with schedules
+  umbc_courses.json  # Course schedule data
+  seed.js           # One-time Firebase seeder
 ```
 
 ## Status Indicators
 
 - **Green** -- Available, confirmed free
 - **Yellow** -- Likely free, no recent reports
-- **Red** -- In class right now
+- **Gold** -- In class right now (UMBC schedule)
 - **Gray** -- Unknown or unchecked
-- **Gold** -- Your booked spot
+- **Gold (Yours)** -- Your booked/claimed spot
 
 ## Demo Script
 
-1. Open app -- red spots are in class right now based on real UMBC schedule
-2. Open second tab, claim or book a spot -- watch it update in main tab instantly
-3. Type in QueryBar: "I have 45 minutes near Fine Arts, where should I go?"
-4. Hit "Plan My Day" -- paste a schedule -- see gap-by-gap study plan
+1. Open app -- gold spots are in class based on real UMBC schedule
+2. Your claimed spots appear at the top
+3. Open second tab, claim or book a spot -- watch it update in main tab instantly
+4. Type in QueryBar: "I have 45 minutes near Fine Arts, where should I go?"
+5. Hit "Plan My Day" -- paste a schedule -- see gap-by-gap study plan
+6. Check the Stats Bar for real-time availability counts
+
+## Adding New Spots
+
+Add rooms to `study_spots.json` and courses to `umbc_courses.json`. Day codes must be short form: Mo, Tu, We, Th, Fr, Sa, Su.

@@ -264,6 +264,23 @@
       }
     },
     {
+      "id": "ite_231",
+      "building": "ITE",
+      "room": "231",
+      "display_name": "ITE 231",
+      "room_type": "classroom",
+      "capacity": 24,
+      "coordinates": {
+        "lat": 39.257,
+        "lng": -76.711
+      },
+      "hours": {
+        "open": "07:00",
+        "close": "23:59",
+        "last_booking": "23:30"
+      }
+    },
+    {
       "id": "lecture_hall_1_101",
       "building": "Lecture Hall 1",
       "room": "101",

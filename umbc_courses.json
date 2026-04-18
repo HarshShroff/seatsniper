@@ -708,6 +708,24 @@
       "status": "Open",
       "seats_available": 15,
       "seats_total": 24
+    },
+    {
+      "id": "DEMO-01",
+      "code": "DEMO 001",
+      "name": "Demo Class for Seatsniper",
+      "section": "01",
+      "days": [
+        "Sa",
+        "Su"
+      ],
+      "start": "20:00",
+      "end": "22:00",
+      "building": "ITE",
+      "room": "231",
+      "credits": 0,
+      "status": "Open",
+      "seats_available": 15,
+      "seats_total": 24
     }
   ]
 }
