@@ -1,23 +1,25 @@
-# 🎯 SeatSniper
+# SeatSniper
 
 **Your campus. Your time. Never wasted.**
 
-SeatSniper helps UMBC commuter students find available study spots in real time — powered by crowdsourcing, live class schedules, and Gemini AI.
+SeatSniper helps UMBC commuter students find available study spots in real time -- powered by crowdsourcing, live class schedules, and Gemini AI.
 
 ## Features
 
-- **Live Spot Grid** — 28 real UMBC rooms with schedule-aware availability (green/yellow/red)
-- **Crowdsourced Reports** — one-tap "Found a seat" / "It's full" updates Firebase instantly, visible to everyone
-- **Gemini Spot Finder** — natural language: *"quiet spot near Engineering for 2 hours"*
-- **Gemini Gap Optimizer** — paste your schedule, get a full study day plan with spot recommendations per gap
-- **Live Clock** — statuses recompute every minute, status dots flip automatically when classes end
+- **Live Spot Grid** -- 28 real UMBC rooms with schedule-aware availability
+- **Crowdsourced Reports** -- one-tap seat availability updates instantly sync to all users
+- **Gemini Spot Finder** -- natural language: "quiet spot near Engineering for 2 hours"
+- **Gemini Gap Optimizer** -- paste your schedule, get a full study day plan with spot recommendations
+- **Live Clock** -- statuses recompute every minute, spots flip when classes end
+- **Vibe Check** -- AI predicts crowd/noise levels for both instant claims and advance bookings
+- **Advance Booking** -- book a spot up to 7 days ahead, holds your spot until you arrive
 
 ## Stack
 
 - React + Vite
 - Firebase Realtime Database (live sync)
-- Gemini 2.0 Flash API + SGA UMBC Events API
-- Pure CSS dark theme with UMBC gold
+- Gemini 2.0 Flash API + UMBC Events API
+- Pure CSS with UMBC gold accent
 
 ## Setup
 
@@ -49,17 +51,26 @@ src/
   App.jsx             # Root: Firebase listeners, Gemini calls, state
   components/
     Header.jsx        # Logo + live clock
-    QueryBar.jsx      # Find a spot / Plan my day tabs
-    GeminiPanel.jsx   # AI response display
-    SpotGrid.jsx      # Filter pills, sort toggle, grid
-    SpotCard.jsx      # Individual spot: status, free-until, report buttons
-study_spots.json      # 28 real UMBC rooms with Spring 2026 schedules
-seed.js               # One-time Firebase seeder
+    QueryBar.jsx     # Find a spot / Plan my day tabs
+    GeminiPanel.jsx  # AI response display
+    SpotGrid.jsx    # Filter pills, sort toggle, grid
+    SpotCard.jsx    # Individual spot: status, free-until, claim buttons
+    BookingModal.jsx # Instant claim + advance booking with vibe check
+  study_spots.json    # 28 real UMBC rooms with schedules
+  seed.js            # One-time Firebase seeder
 ```
+
+## Status Indicators
+
+- **Green** -- Available, confirmed free
+- **Yellow** -- Likely free, no recent reports
+- **Red** -- In class right now
+- **Gray** -- Unknown or unchecked
+- **Gold** -- Your booked spot
 
 ## Demo Script
 
-1. Open app — red spots are in class **right now** based on real UMBC schedule
-2. Open incognito tab, report a spot as full → watch it update in main tab instantly
-3. Type in QueryBar: *"I have 45 minutes near Fine Arts, where should I go?"*
-4. Hit "Plan My Day" → paste a schedule → see gap-by-gap study plan
+1. Open app -- red spots are in class right now based on real UMBC schedule
+2. Open second tab, claim or book a spot -- watch it update in main tab instantly
+3. Type in QueryBar: "I have 45 minutes near Fine Arts, where should I go?"
+4. Hit "Plan My Day" -- paste a schedule -- see gap-by-gap study plan

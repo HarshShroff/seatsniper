@@ -27,7 +27,7 @@ function dateLabel(d, i) {
   return `${DAYS[d.getDay()]} ${MONTHS[d.getMonth()]} ${d.getDate()}`
 }
 
-export default function BookingModal({ spot, now, advanceBookings, sessionId, onClaimNow, onClaimAhead, onClose }) {
+export default function BookingModal({ spot, now, advanceBookings, sessionId, onClaimNow, onClaimAhead, onClose, vibeAhead, onVibeAhead }) {
   const [tab, setTab] = useState('now')
   const [nowDuration, setNowDuration] = useState(60)
   const [nowLoading, setNowLoading] = useState(false)
@@ -43,15 +43,27 @@ export default function BookingModal({ spot, now, advanceBookings, sessionId, on
 
   async function handleClaimNow() {
     setNowLoading(true)
-    await onClaimNow(spot.id, nowDuration)
-    onClose()
+    try {
+      await onClaimNow(spot.id, nowDuration)
+      onClose()
+    } catch (err) {
+      console.error('Claim now failed:', err)
+    } finally {
+      setNowLoading(false)
+    }
   }
 
   async function handleClaimAhead() {
     if (!selectedTime) return
     setAheadLoading(true)
-    await onClaimAhead(spot, formatDateKey(selectedDate), selectedTime, aheadDuration)
-    onClose()
+    try {
+      await onClaimAhead(spot, formatDateKey(selectedDate), selectedTime, aheadDuration)
+      onClose()
+    } catch (err) {
+      console.error('Advance booking failed:', err)
+    } finally {
+      setAheadLoading(false)
+    }
   }
 
   function slotStatusForSelected(slotTime) {
@@ -139,6 +151,16 @@ export default function BookingModal({ spot, now, advanceBookings, sessionId, on
               ))}
             </div>
 
+            {selectedTime && onVibeAhead && (
+              <button
+                className="vibe-btn"
+                onClick={() => onVibeAhead(spot, selectedDate, selectedTime, aheadDuration)}
+                disabled={vibeAhead?.loading}
+              >
+                {vibeAhead?.loading ? 'Checking...' : 'Check Vibe'}
+              </button>
+            )}
+
             <p className="modal-label">Start time</p>
             <div className="slot-legend">
               {Object.entries(SLOT_LEGEND).map(([k, v]) => (
@@ -163,6 +185,12 @@ export default function BookingModal({ spot, now, advanceBookings, sessionId, on
                 )
               })}
             </div>
+
+            {selectedTime && vibeAhead?.text && (
+              <div className="vibe-forecast">
+                <span className="vibe-text">{vibeAhead.text}</span>
+              </div>
+            )}
 
             {selectedTime && (
               <div className="selected-summary">

@@ -1,15 +1,89 @@
-import coursesData from '../umbc_courses.json'
+import coursesData   from '../umbc_courses.json'
+import scheduleData  from '../umbc_schedule.json'
 
 export const DAY_MAP = { 0: 'Su', 1: 'Mo', 2: 'Tu', 3: 'We', 4: 'Th', 5: 'Fr', 6: 'Sa' }
 
-// Pre-index courses by "building|room" for fast lookup, skip 'varies' entries
-const COURSE_INDEX = {}
-for (const c of coursesData.courses) {
-  if (!c.building || c.building === 'varies' || !c.room || c.start === 'varies') continue
-  const key = `${c.building}|${c.room}`
-  if (!COURSE_INDEX[key]) COURSE_INDEX[key] = []
-  COURSE_INDEX[key].push(c)
+// ── Day-name normalisation ──────────────────────────────────────────────────
+// umbc_courses.json uses short codes: "Mo","Tu","We","Th","Fr"
+// umbc_schedule.json uses full names: "Monday","Tuesday",…
+const FULL_TO_SHORT = {
+  Monday: 'Mo', Tuesday: 'Tu', Wednesday: 'We',
+  Thursday: 'Th', Friday: 'Fr', Saturday: 'Sa', Sunday: 'Su',
 }
+
+// Convert "2:30 pm" → "14:30"
+function to24(timeStr) {
+  if (!timeStr) return null
+  const m = timeStr.match(/(\d+):(\d+)\s*(am|pm)/i)
+  if (!m) return null
+  let h = parseInt(m[1], 10)
+  const min = m[2]
+  const ampm = m[3].toLowerCase()
+  if (ampm === 'pm' && h !== 12) h += 12
+  if (ampm === 'am' && h === 12) h = 0
+  return `${String(h).padStart(2, '0')}:${min}`
+}
+
+// Parse "Fine Arts 006" → { building: "Fine Arts", room: "006" }
+function parseLocation(loc) {
+  if (!loc) return null
+  // Known multi-word buildings
+  const KNOWN = [
+    'Fine Arts', 'Biological Sciences', 'Meyerhoff Chemistry',
+    'Math & Psychology', 'Performing Arts', 'Sherman Hall',
+    'AOK Library', 'Lecture Hall', 'Engineering', 'Sondheim',
+    'ITE', 'ILS',
+  ]
+  for (const b of KNOWN) {
+    if (loc.startsWith(b)) {
+      const room = loc.slice(b.length).trim()
+      return room ? { building: b, room } : null
+    }
+  }
+  // Fallback: last token is room, rest is building
+  const parts = loc.trim().split(/\s+/)
+  if (parts.length < 2) return null
+  return { building: parts.slice(0, -1).join(' '), room: parts[parts.length - 1] }
+}
+
+// ── Build unified COURSE_INDEX ──────────────────────────────────────────────
+// Dedup key: building|room|day|start
+const COURSE_INDEX = {}
+const _seen = new Set()
+
+function addCourse(building, room, days, start24, end24, code) {
+  if (!building || building === 'varies' || !room || !start24 || start24 === 'varies') return
+  const key = `${building}|${room}`
+  if (!COURSE_INDEX[key]) COURSE_INDEX[key] = []
+  for (const day of days) {
+    const dedupKey = `${building}|${room}|${day}|${start24}`
+    if (_seen.has(dedupKey)) continue
+    _seen.add(dedupKey)
+    COURSE_INDEX[key].push({ building, room, days: [day], start: start24, end: end24, code })
+  }
+}
+
+// From umbc_courses.json (flat, short day codes)
+for (const c of coursesData.courses) {
+  addCourse(c.building, c.room, c.days, c.start, c.end, c.code)
+}
+
+// From umbc_schedule.json (nested sections, full day names, 12h times)
+for (const course of scheduleData.courses) {
+  for (const sec of (course.sections || [])) {
+    if (sec.instruction_mode && sec.instruction_mode !== 'In Person') continue
+    const loc = parseLocation(sec.location)
+    if (!loc) continue
+    const start24 = to24(sec.start_time)
+    const end24   = to24(sec.end_time)
+    if (!start24 || !end24) continue
+    const shortDays = (sec.days || []).map(d => FULL_TO_SHORT[d]).filter(Boolean)
+    addCourse(loc.building, loc.room, shortDays, start24, end24, course.course_code)
+  }
+}
+
+// ── Export merged index for Gemini vibe forecast ───────────────────────────
+export { COURSE_INDEX }
 
 export function toMinutes(timeStr) {
   const [h, m] = timeStr.split(':').map(Number)
@@ -72,12 +146,20 @@ export function freeUntil(spot, now = new Date()) {
   return `${h12}:${String(m).padStart(2, '0')} ${ampm}`
 }
 
-// booking: { booked_until: timestamp, session_id } | null
+// booking: { booked_until: timestamp, session_id, last_reported? } | null
+// Status priority: closed > in_class > taken > available > likely_free > unknown
 export function getSpotStatus(spot, booking, now = new Date()) {
   const mins = nowMinutes(now)
   if (mins >= toMinutes('23:30')) return 'closed'
   if (isOccupied(spot, now).occupied) return 'in_class'
   if (booking && booking.booked_until > now.getTime()) return 'taken'
+
+  // Crowdsource freshness: report within last 30 min → 'available', else 'unknown'
+  if (booking && booking.last_reported) {
+    const ageMin = (now.getTime() - booking.last_reported) / 60000
+    return ageMin <= 30 ? 'available' : 'unknown'
+  }
+
   return 'unknown'
 }
 

@@ -1,42 +1,45 @@
 import SpotCard from './SpotCard'
 import { getSpotStatus } from '../availability'
 
-const STATUS_ORDER = { taken: 0, unknown: 1, in_class: 2, closed: 3 }
+const STATUS_ORDER = { available: 0, unknown: 1, taken: 2, in_class: 3, closed: 4 }
 const ALL = 'All'
 
 const BUILDING_SHORT = {
   'Biological Sciences': 'Bio Sci',
-  'Fine Arts': 'Fine Arts',
-  'Lecture Hall 1': 'Lec Hall',
-  'Math & Psychology': 'Math/Psych',
-  'Meyerhoff Chemistry': 'Meyerhoff',
-  'Performing Arts': 'Perf Arts',
-  'Sherman Hall': 'Sherman',
-  'AOK Library': 'Library',
+  'Fine Arts':           'Fine Arts',
+  'Lecture Hall 1':      'Lec Hall',
+  'Math & Psychology':   'Math/Psych',
+  'Meyerhoff Chemistry': 'Chemistry',
+  'Performing Arts':     'Perf Arts',
+  'Sherman Hall':        'Sherman',
+  'AOK Library':         'Library',
 }
 
 function shortLabel(b) {
   return b === ALL ? 'All' : (BUILDING_SHORT[b] || b)
 }
 
-export default function SpotGrid({ spots, bookings, sessionId, now, onSelect, selectedSpot, onRelease, filter, sort, onFilterChange, onSortChange }) {
-  const buildings = [ALL, ...new Set(spots.map((s) => s.building))]
+export default function SpotGrid({
+  spots, bookings, sessionId, now,
+  onSelect, selectedSpot, onRelease,
+  filter, sort, onFilterChange, onSortChange,
+  onHover, vibeForecasts, onVibeForecast,
+}) {
+  const buildings = [ALL, ...new Set(spots.map(s => s.building))]
 
   const filtered = spots
-    .filter((s) => filter === ALL || s.building === filter)
+    .filter(s => filter === ALL || s.building === filter)
     .sort((a, b) => {
       if (sort === 'available') {
         const sa = getSpotStatus(a, bookings[a.id], now)
         const sb = getSpotStatus(b, bookings[b.id], now)
-        const orderA = sa === 'unknown' ? -1 : STATUS_ORDER[sa] ?? 5
-        const orderB = sb === 'unknown' ? -1 : STATUS_ORDER[sb] ?? 5
-        return orderA - orderB
+        return (STATUS_ORDER[sa] ?? 99) - (STATUS_ORDER[sb] ?? 99)
       }
       return a.building.localeCompare(b.building)
     })
 
   const availableCount = spots.filter(s =>
-    ['unknown', 'available'].includes(getSpotStatus(s, bookings[s.id], now))
+    ['available', 'unknown'].includes(getSpotStatus(s, bookings[s.id], now))
   ).length
 
   return (
@@ -45,10 +48,10 @@ export default function SpotGrid({ spots, bookings, sessionId, now, onSelect, se
         <div className="grid-controls-left">
           <div className="grid-count">
             <span className="count-num">{availableCount}</span>
-            <span className="count-label">spots available</span>
+            <span className="count-label">&nbsp;spots open</span>
           </div>
           <div className="filter-pills">
-            {buildings.map((b) => (
+            {buildings.map(b => (
               <button
                 key={b}
                 className={`filter-pill ${filter === b ? 'active' : ''}`}
@@ -60,17 +63,23 @@ export default function SpotGrid({ spots, bookings, sessionId, now, onSelect, se
           </div>
         </div>
         <div className="sort-toggle">
-          <button className={`sort-btn ${sort === 'available' ? 'active' : ''}`} onClick={() => onSortChange('available')}>
-            Available First
+          <button
+            className={`sort-btn ${sort === 'available' ? 'active' : ''}`}
+            onClick={() => onSortChange('available')}
+          >
+            Available first
           </button>
-          <button className={`sort-btn ${sort === 'building' ? 'active' : ''}`} onClick={() => onSortChange('building')}>
-            By Building
+          <button
+            className={`sort-btn ${sort === 'building' ? 'active' : ''}`}
+            onClick={() => onSortChange('building')}
+          >
+            By building
           </button>
         </div>
       </div>
 
       <div className="spot-grid">
-        {filtered.map((spot) => (
+        {filtered.map(spot => (
           <SpotCard
             key={spot.id}
             spot={spot}
@@ -80,6 +89,9 @@ export default function SpotGrid({ spots, bookings, sessionId, now, onSelect, se
             onSelect={onSelect}
             selected={selectedSpot?.id === spot.id}
             onRelease={onRelease}
+            onHover={onHover}
+            vibeForecast={vibeForecasts?.[spot.id]}
+            onVibeForecast={onVibeForecast}
           />
         ))}
       </div>

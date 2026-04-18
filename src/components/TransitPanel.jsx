@@ -59,8 +59,7 @@ export default function TransitPanel() {
     <div className="transit-panel">
       <div className="transit-header" onClick={() => setExpanded(!expanded)}>
         <div className="transit-title">
-          <span>🚌</span>
-          <span>Live Transit</span>
+          <span>Transit</span>
         </div>
         <span className="transit-toggle">{expanded ? '▲' : '▼'}</span>
       </div>

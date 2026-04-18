@@ -23,3 +23,40 @@ export async function getEvents() {
     return []
   }
 }
+
+// ── Transit API (TransitTrack / Transloc) ──
+// UMBC uses a Transloc-compatible feed. These return empty arrays gracefully
+// if the endpoint is unavailable so TransitPanel fails silently.
+
+export async function getTransitArrivals() {
+  try {
+    const res = await fetch(`${BASE}/transit/arrivals`)
+    if (!res.ok) return []
+    const json = await res.json()
+    return Array.isArray(json) ? json : json?.data ?? []
+  } catch {
+    return []
+  }
+}
+
+export async function getTransitStops() {
+  try {
+    const res = await fetch(`${BASE}/transit/stops`)
+    if (!res.ok) return []
+    const json = await res.json()
+    return Array.isArray(json) ? json : json?.data ?? []
+  } catch {
+    return []
+  }
+}
+
+export async function getTransitRoutes() {
+  try {
+    const res = await fetch(`${BASE}/transit/routes`)
+    if (!res.ok) return []
+    const json = await res.json()
+    return Array.isArray(json) ? json : json?.data ?? []
+  } catch {
+    return []
+  }
+}
