@@ -1,4 +1,4 @@
-# SeatSniper
+# 🎯 SeatSniper
 
 **Your campus. Your time. Never wasted.**
 
